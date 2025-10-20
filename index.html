@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratorio No.8 - The Fab Four</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="cancion.js"></script>
+  <style>
+    .album {
+      background-color: #414141;
+      color: #fff;
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    li {
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    li:hover {
+      color: #f1c40f;
+    }
+
+    li.active {
+      color: #f1c40f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">The Beatles</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#the-fab-four">BAND</a></li>
+          <li class="nav-item"><a class="nav-link" href="#album">ALBUMS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#abbey-road">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CAROUSEL -->
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./imagenes/abbey_road.jpg" class="d-block w-100" alt="Abbey Road">
+      </div>
+      <div class="carousel-item">
+        <img src="./imagenes/thebeatles_2.jpg" class="d-block w-100" alt="The Beatles">
+      </div>
+      <div class="carousel-item">
+        <img src="./imagenes/thebeatles_1962.jpg" class="d-block w-100" alt="The Beatles 1962">
+      </div>
+    </div>
+  </div>
+
+  <!-- THE FAB FOUR -->
+  <div id="the-fab-four" class="mt-5 text-center">
+    <img src="./imagenes/The-Beatles-Logo.jpg" alt="The Beatles Logo" class="img-fluid" width="300">
+    <h1 class="mt-4">THE FAB FOUR</h1>
+    <p class="mx-auto" style="max-width: 700px">
+      The Beatles fueron una de las bandas más influyentes de todos los tiempos. Formados en Liverpool en 1960,
+      cambiaron la historia de la música moderna con su innovación y talento.
+    </p>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-3">
+          <h2>John Lennon</h2><img src="./imagenes/john-lennon.jpg" class="rounded-circle" width="70%">
+        </div>
+        <div class="col-md-3">
+          <h2>Paul McCartney</h2><img src="./imagenes/paul-mccartney.jpg" class="rounded-circle" width="70%">
+        </div>
+        <div class="col-md-3">
+          <h2>George Harrison</h2><img src="./imagenes/george-harrison.jpg" class="rounded-circle" width="70%">
+        </div>
+        <div class="col-md-3">
+          <h2>Ringo Starr</h2><img src="./imagenes/ringo-starr.jpg" class="rounded-circle" width="70%">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Album-->
+  <div id="album">
+    <div class="container mt-5 pt-5">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3>ALBUMS</h3>
+        </div>
+      </div>
+
+      <div id="Tour" class="row pt-5">
+        <div class="col-md-6 col-sm-12 bg-dark text-light pt-5">
+          <h4 class="text-center">Revolver</h4>
+          <ol id="album-revolver">
+            <li onclick="mostrarCancion('Revolver', 0)">Taxman</li>
+            <li onclick="mostrarCancion('Revolver', 1)">Eleanor Rigby</li>
+            <li onclick="mostrarCancion('Revolver', 2)">I'm Only Sleeping</li>
+            <li onclick="mostrarCancion('Revolver', 3)">Love You To</li>
+            <li onclick="mostrarCancion('Revolver', 4)">Here, There and Everywhere</li>
+            <li onclick="mostrarCancion('Revolver', 5)">Yellow Submarine</li>
+            <li onclick="mostrarCancion('Revolver', 6)">She Said She Said</li>
+            <li onclick="mostrarCancion('Revolver', 7)">Good Day Sunshine</li>
+            <li onclick="mostrarCancion('Revolver', 8)">And Your Bird Can Sing</li>
+            <li onclick="mostrarCancion('Revolver', 9)">For No One</li>
+            <li onclick="mostrarCancion('Revolver', 10)">Doctor Robert</li>
+            <li onclick="mostrarCancion('Revolver', 11)">I Want to Tell You</li>
+            <li onclick="mostrarCancion('Revolver', 12)">Got to Get You into My Life</li>
+            <li onclick="mostrarCancion('Revolver', 13)">Tomorrow Never Knows</li>
+          </ol>
+        </div>
+        <div class="col-md-6 col-sm-12 bg-dark pt-5 pb-5 text-center">
+          <iframe id="videoPlayer_Revolver" width="90%" height="300" src="" title="YouTube video player" frameborder="0"
+            allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="row pt-5">
+        <div class="col-md-6 col-sm-12 bg-dark text-light pt-5">
+          <h4 class="text-center">Abbey Road</h4>
+
+          <!--Para cambair musica click-->
+          <ol id="album-abbeyRoad">
+            <li onclick="mostrarCancion('Abbey Road', 0)">Come Together</li>
+            <li onclick="mostrarCancion('Abbey Road', 1)">Something</li>
+            <li onclick="mostrarCancion('Abbey Road', 2)">Maxwell's Silver Hammer</li>
+            <li onclick="mostrarCancion('Abbey Road', 3)">Oh! Darling</li>
+            <li onclick="mostrarCancion('Abbey Road', 4)">Octopus's Garden</li>
+            <li onclick="mostrarCancion('Abbey Road', 5)">I Want You (She's So Heavy)</li>
+            <li onclick="mostrarCancion('Abbey Road', 6)">Here Comes the Sun</li>
+            <li onclick="mostrarCancion('Abbey Road', 7)">Because</li>
+            <li onclick="mostrarCancion('Abbey Road', 8)">You Never Give Me Your Money</li>
+            <li onclick="mostrarCancion('Abbey Road', 9)">Sun King</li>
+            <li onclick="mostrarCancion('Abbey Road', 10)">Mean Mr. Mustard</li>
+            <li onclick="mostrarCancion('Abbey Road', 11)">Polythene Pam</li>
+            <li onclick="mostrarCancion('Abbey Road', 12)">She Came In Through the Bathroom Window</li>
+            <li onclick="mostrarCancion('Abbey Road', 13)">Golden Slumbers</li>
+            <li onclick="mostrarCancion('Abbey Road', 14)">Carry That Weight</li>
+            <li onclick="mostrarCancion('Abbey Road', 15)">The End</li>
+            <li onclick="mostrarCancion('Abbey Road', 16)">Her Majesty</li>
+        </ol>
+        </div>
+        <div class="col-md-6 col-sm-12 bg-dark pt-5 pb-5">
+          <iframe id="videoPlayer_magical" width="90%" height="300" src="" title="YouTube video player" frameborder="0"
+            allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Fin Album-->
+
+  <!-- ABBEY ROAD SECTION -->
+  <div id="abbey-road" class="mt-5">
+    <div class="container-fluid p-0">
+      <img src="./imagenes/abbey_road_street.webp" alt="Abbey Road" class="img-fluid w-100">
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="jumbotron text-center bg-dark text-white mt-0 p-4">
+    <h5>The Beatles</h5>
+    <p>© Derechos Reservados - Liverpool</p>
+  </div>
+</body>
+
+</html>
