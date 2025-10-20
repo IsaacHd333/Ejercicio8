@@ -48,16 +48,43 @@ const albums = [
     }
 ];
 
-function mostrarCancion(albumNombre, numCancion) {
+function mostrarCancion(albumNombre, numCancion, element) {
     const album = albums.find(a => a.album === albumNombre);
-    const cancion = album.canciones[numCancion];
 
-    document.addEventListener("click", (event) => {
-        if (event.target.closest("#album-revolver")) {
-            document.getElementById("videoPlayer_Revolver").src = cancion.url;
-        } else if (event.target.closest("#album-abbeyRoad")) {
-            document.getElementById("videoPlayer_Abbey").src = cancion.url;
-        }
-    });
+    // Error: Manejo de índice. Asegurarse de que el índice es válido.
+    if (!album || numCancion < 0 || numCancion >= album.canciones.length) {
+        console.error("Álbum o índice de canción no válido.");
+        return;
+    }
+
+    const cancion = album.canciones[numCancion];
+    
+    // 1. Lógica de reproducción directa (¡ELIMINANDO el event listener del document!)
+    let videoPlayerId;
+
+    if (albumNombre === "Revolver") {
+        videoPlayerId = "videoPlayer_Revolver";
+    } else if (albumNombre === "Abbey Road") {
+        // 2. Corrección del ID para que coincida con el HTML: 'videoPlayer_AbbeyRoad'
+        videoPlayerId = "videoPlayer_AbbeyRoad"; 
+    }
+
+    const videoPlayer = document.getElementById(videoPlayerId);
+    if (videoPlayer) {
+        videoPlayer.src = cancion.url;
+    }
+
     console.log(`Reproduciendo: ${cancion.nombre} (${album.album})`);
+
+    // 3. (Opcional) Lógica para destacar la canción activa
+    // Eliminar la clase 'active' de todas las canciones en la lista
+    const currentAlbumList = document.getElementById(`album-${albumNombre.replace(/\s/g, '')}`);
+    if (currentAlbumList) {
+        currentAlbumList.querySelectorAll('li').forEach(li => li.classList.remove('active'));
+    }
+
+    // Agregar la clase 'active' al elemento que fue clickeado (pasado como 'element' en el HTML)
+    if (element) {
+        element.classList.add('active');
+    }
 }
