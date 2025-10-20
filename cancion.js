@@ -7,7 +7,7 @@ const albums = [
         canciones: [
             { nombre: "Come Together", url: "https://www.youtube.com/embed/45cYwDMibGo", duracion: "4:20", compositores: "Lennon, McCartney" },
             { nombre: "Something", url: "https://www.youtube.com/embed/UelDrZ1aFeY", duracion: "3:03", compositores: "George Harrison" },
-            { nombre: "Maxwell’s Silver Hammer", url: "https://www.youtube.com/embed/UG7Kjtn3nL8", duracion: "3:27", compositores: "Lennon, McCartney" },
+            { nombre: "Maxwell's Silver Hammer", url: "https://www.youtube.com/embed/UG7Kjtn3nL8", duracion: "3:27", compositores: "Lennon, McCartney" },
             { nombre: "Oh! Darling", url: "https://www.youtube.com/embed/YxCQZx5a1T8", duracion: "3:26", compositores: "Lennon, McCartney" },
             { nombre: "Octopus’s Garden", url: "https://www.youtube.com/embed/cgPZ0w1-cfA", duracion: "2:51", compositores: "Ringo Starr" },
             { nombre: "I Want You (She’s So Heavy)", url: "https://www.youtube.com/embed/NPBzKR3j5pI", duracion: "7:47", compositores: "Lennon, McCartney" },
