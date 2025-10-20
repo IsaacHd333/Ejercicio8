@@ -1,29 +1,33 @@
 const albums = [
     {
-        album: "Abbey Road",
-        anio: 1969,
-        descografica: "Apple Records",
-        numCanciones: "17",
-        canciones: [
-            { nombre: "Come Together", url: "https://www.youtube.com/embed/45cYwDMibGo", duracion: "4:20", compositores: "Lennon, McCartney" },
-            { nombre: "Something", url: "https://www.youtube.com/embed/UelDrZ1aFeY", duracion: "3:03", compositores: "George Harrison" },
-            { nombre: "Maxwell's Silver Hammer", url: "https://www.youtube.com/embed/UG7Kjtn3nL8", duracion: "3:27", compositores: "Lennon, McCartney" },
-            { nombre: "Oh! Darling", url: "https://www.youtube.com/embed/YxCQZx5a1T8", duracion: "3:26", compositores: "Lennon, McCartney" },
-            { nombre: "Octopus’s Garden", url: "https://www.youtube.com/embed/cgPZ0w1-cfA", duracion: "2:51", compositores: "Ringo Starr" },
-            { nombre: "I Want You (She’s So Heavy)", url: "https://www.youtube.com/embed/NPBzKR3j5pI", duracion: "7:47", compositores: "Lennon, McCartney" },
-            { nombre: "Here Comes the Sun", url: "https://www.youtube.com/embed/KQetemT1sWc", duracion: "3:05", compositores: "George Harrison" },
-            { nombre: "Because", url: "https://www.youtube.com/embed/zt7Oa2lgY3U", duracion: "2:45", compositores: "Lennon, McCartney" },
-            { nombre: "You Never Give Me Your Money", url: "https://www.youtube.com/embed/LQSuTPqAqzA", duracion: "4:02", compositores: "Lennon, McCartney" },
-            { nombre: "Sun King", url: "https://www.youtube.com/embed/_qL1E7xOQwA", duracion: "2:26", compositores: "Lennon, McCartney" },
-            { nombre: "Mean Mr. Mustard", url: "https://www.youtube.com/embed/dnl3tB9l4KI", duracion: "1:06", compositores: "Lennon, McCartney" },
-            { nombre: "Polythene Pam", url: "https://www.youtube.com/embed/loGQK0H2z20", duracion: "1:12", compositores: "Lennon, McCartney" },
-            { nombre: "She Came In Through the Bathroom Window", url: "https://www.youtube.com/embed/nKjK8r3HH28", duracion: "1:57", compositores: "Lennon, McCartney" },
-            { nombre: "Golden Slumbers", url: "https://www.youtube.com/embed/Tt8Jklj2YDA", duracion: "1:31", compositores: "Lennon, McCartney" },
-            { nombre: "Carry That Weight", url: "https://www.youtube.com/embed/MtZ4tx0y-Wc", duracion: "1:36", compositores: "Lennon, McCartney" },
-            { nombre: "The End", url: "https://www.youtube.com/embed/q_e87JJoC1Y", duracion: "2:05", compositores: "Lennon, McCartney" },
-            { nombre: "Her Majesty", url: "https://www.youtube.com/embed/qM_gZKZ1vLk", duracion: "0:23", compositores: "Lennon, McCartney" }
-        ]
-    },
+    album: "Abbey Road",
+    anio: 1969,
+    descografica: "Apple Records",
+    numCanciones: "17",
+    canciones: [
+        { nombre: "Come Together", url: "https://www.youtube.com/embed/45cYwDMibGo", duracion: "4:20", compositores: "Lennon, McCartney" },
+        { nombre: "Something", url: "https://www.youtube.com/embed/UelDrZ1aFeY", duracion: "3:03", compositores: "George Harrison" },
+        // CORREGIDO: Versión con letras para asegurar el embed.
+        { nombre: "Maxwell's Silver Hammer", url: "https://www.youtube.com/embed/vO-FwS1t4qI", duracion: "3:27", compositores: "Lennon, McCartney" },
+        // CORREGIDO: Versión alternativa.
+        { nombre: "Oh! Darling", url: "https://www.youtube.com/embed/U7G24gW_Gxo", duracion: "3:28", compositores: "Lennon, McCartney" },
+        // CORREGIDO: Versión alternativa.
+        { nombre: "Octopus’s Garden", url: "https://www.youtube.com/embed/8o_r9jC_2x0", duracion: "2:51", compositores: "Ringo Starr" },
+        // CORREGIDO: Versión con letras/imagen estática.
+        { nombre: "I Want You (She’s So Heavy)", url: "https://www.youtube.com/embed/g2g-nFjLh9A", duracion: "7:47", compositores: "Lennon, McCartney" },
+        { nombre: "Here Comes the Sun", url: "https://www.youtube.com/embed/KQetemT1sWc", duracion: "3:05", compositores: "George Harrison" },
+        { nombre: "Because", url: "https://www.youtube.com/embed/zt7Oa2lgY3U", duracion: "2:45", compositores: "Lennon, McCartney" },
+        { nombre: "You Never Give Me Your Money", url: "https://www.youtube.com/embed/LQSuTPqAqzA", duracion: "4:02", compositores: "Lennon, McCartney" },
+        { nombre: "Sun King", url: "https://www.youtube.com/embed/_qL1E7xOQwA", duracion: "2:26", compositores: "Lennon, McCartney" },
+        { nombre: "Mean Mr. Mustard", url: "https://www.youtube.com/embed/dnl3tB9l4KI", duracion: "1:06", compositores: "Lennon, McCartney" },
+        { nombre: "Polythene Pam", url: "https://www.youtube.com/embed/loGQK0H2z20", duracion: "1:12", compositores: "Lennon, McCartney" },
+        { nombre: "She Came In Through the Bathroom Window", url: "https://www.youtube.com/embed/nKjK8r3HH28", duracion: "1:57", compositores: "Lennon, McCartney" },
+        { nombre: "Golden Slumbers", url: "https://www.youtube.com/embed/Tt8Jklj2YDA", duracion: "1:31", compositores: "Lennon, McCartney" },
+        { nombre: "Carry That Weight", url: "https://www.youtube.com/embed/MtZ4tx0y-Wc", duracion: "1:36", compositores: "Lennon, McCartney" },
+        { nombre: "The End", url: "https://www.youtube.com/embed/q_e87JJoC1Y", duracion: "2:05", compositores: "Lennon, McCartney" },
+        { nombre: "Her Majesty", url: "https://www.youtube.com/embed/qM_gZKZ1vLk", duracion: "0:23", compositores: "Lennon, McCartney" }
+    ]
+},
     {
         album: "Revolver",
         anio: 1966,
